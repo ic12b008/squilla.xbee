@@ -73,7 +73,7 @@ public class XBeeIO {
     }
     
     public void write64(String cmd, long dat) throws IOException {
-        writeMulti8(cmd, ByteUtil.BIG_ENDIAN.toByteArray(dat));
+        writeMulti8(cmd, ByteUtil.BIG_ENDIAN.toByteArray(dat, ByteUtil.INT_64_SIZE));
     }
     
     public void write32(String cmd, int dat) throws IOException {
